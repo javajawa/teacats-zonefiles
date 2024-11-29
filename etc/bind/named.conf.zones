@@ -1,0 +1,96 @@
+// vim: syntax=named nospell
+
+view "internal" {
+	match-clients { internal; };
+
+	recursion yes;
+
+	include "/etc/bind/named.conf.default-zones";
+	include "/etc/bind/zones.rfc1918";
+
+	zone "tea-cats.co.uk" {
+		type master;
+		file "/etc/bind/dns-zones/internal.tea-cats";
+	};
+};
+
+view "public" {
+	match-clients { any; };
+
+	recursion no;
+
+	zone "tea-cats.co.uk" {
+		type master;
+		file "/etc/bind/dns-zones/uk.co.tea-cats";
+
+		// Allow DNS prood for Let's Encrypt certs
+		update-policy {
+			grant lets-encrypt subdomain tea-cats.co.uk txt;
+		};
+	};
+
+	zone "teacats.co.uk" {
+		type master;
+		file "/etc/bind/dns-zones/website";
+	};
+
+	zone "harcourtprogramming.co.uk" {
+		type master;
+		file "/etc/bind/dns-zones/uk.co.harcourtprogramming";
+	};
+
+	zone "bleysblade.com" {
+		type master;
+		file "/etc/bind/dns-zones/com.bleysblade";
+	};
+
+	zone "canigohomeyet.co.uk" {
+		type master;
+		file "/etc/bind/dns-zones/website";
+	};
+
+	zone "play-noggle.co.uk" {
+		type master;
+		file "/etc/bind/dns-zones/website";
+	};
+
+	zone "peterdavies.me.uk" {
+		type master;
+		file "/etc/bind/dns-zones/website";
+	};
+
+	zone "t-cats.co.uk" {
+		type master;
+		file "/etc/bind/dns-zones/placeholder";
+	};
+
+	zone "tea-cat.co.uk" {
+		type master;
+		file "/etc/bind/dns-zones/placeholder";
+	};
+
+	zone "teacats.uk" {
+		type master;
+		file "/etc/bind/dns-zones/placeholder";
+	};
+
+	zone "tea-cats.uk" {
+		type master;
+		file "/etc/bind/dns-zones/placeholder";
+	};
+
+	zone "harcourtprogramming.uk" {
+		type master;
+		file "/etc/bind/dns-zones/placeholder";
+	};
+
+	zone "play-noggle.uk" {
+		type master;
+		file "/etc/bind/dns-zones/placeholder";
+	};
+
+	zone "canigohomeyet.uk" {
+		type master;
+		file "/etc/bind/dns-zones/placeholder";
+	};
+};

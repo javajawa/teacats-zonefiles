@@ -1,0 +1,58 @@
+; vim: ts=12 nospell syntax=bindzone
+
+@	7200	IN	SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk ( 2024111301 3600 300 86400 300 )
+	3600	IN	A	192.168.199.73
+	3600	IN	NS	ibis.tea-cats.co.uk.
+	3600	IN	MX	10 mail.tea-cats.co.uk.
+	86400	IN	TXT	"v=spf1 mx a -all"
+	86400	IN	TXT	"google-site-verification=nd7PWPFg81Q9-Ksfuj-s0DjFWn7dv2PyXxgYvkC_Zck"
+
+*	86400	IN	MX	10 mail.tea-cats.co.uk.
+*	86400	IN	A	192.168.169.43
+
+alicia	86400	IN	A	192.168.4.20
+
+boris	86400	IN	A	188.226.151.24
+
+clive	86400	IN	A	192.168.174.180
+
+donald	86400	IN	A	178.62.78.221
+
+falcon	86400	IN	A	192.168.4.24
+
+griffin	86400	IN	A	192.168.199.73
+
+hawk	86400	IN	A	192.168.192.206
+
+kestrel	86400	IN	A	192.168.202.60
+
+ibis	86400	IN	A	192.168.169.43
+
+junco	86400	IN	A	192.168.4.20
+
+lyrebird	86400	IN	A	192.168.159.174
+
+git	3600	IN	CNAME	hawk.tea-cats.co.uk.
+deb	3600	IN	CNAME	hawk.tea-cats.co.uk.
+grafana	3600	IN	CNAME	hawk.tea-cats.co.uk.
+games	3600	IN	CNAME	hawk.tea-cats.co.uk.
+snerge	3600	IN	CNAME	griffin.tea-cats.co.uk.
+bleysblade	3600	IN	CNAME	lyrebird.tea-cats.co.uk.
+db	3600	IN	CNAME	lyrebird.tea-cats.co.uk.
+
+mail	3600	IN	A	192.168.202.60
+
+www	3600	IN	CNAME	griffin.tea-cats.co.uk.
+imap	3600	IN	CNAME	kestrel.tea-cats.co.uk.
+lists	3600	IN	CNAME	clive.tea-cats.co.uk.
+irc	3600	IN	CNAME	clive.tea-cats.co.uk.
+
+ntp	3600	IN	CNAME	ibis.tea-cats.co.uk.
+
+;dzc	86400	IN	TXT	"L4H60C5"
+
+_adsp._domainkey 86400	IN	TXT	"dkim=all"
+ec._domainkey 86400	IN	TXT	"v=DKIM1; k=ecdsa; p=MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEFZ/xnYmfKHMLMU737sjjNzzagDQpvRU2Kn9F4AwBk2w6M/245tBhaM7LURNxVdwBs+BeEQke5RLPsVvkAJblVICLmkNa705lcNqOCw0booszL5ZX524YYPrD6BqAmUFy"
+r1._domainkey 86400	IN	TXT	"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAYSjg+IYCaOy07Uvsicue7BUarOdlKBTEnItc2519zrrS4bofCIoVmBJskX2ZrpmHPMnubE15PGOFaVLqL1O5x8Wwx5AmyVqbRgIBpXaiemtKV/HET34bLXbB0tPIR7TwY33uyKBf9LkkMTtQ4tUP3kRhW3XrTgKnkxOJGMXldQIDAQAB"
+
+_dmarc	86400	IN	TXT	"v=DMARC1; p=none; rua=mailto:dmarc@tea-cats.co.uk; rf=afrf; pct=100"

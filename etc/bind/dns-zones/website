@@ -1,0 +1,15 @@
+; vim: ts=8 nospell syntax=bindzone
+
+@	7200	IN	SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk. ( 2020082001 3600 300 86400 300 )
+	3600	IN	NS	ibis.tea-cats.co.uk.
+	3600	IN	NS	c.ns.buddyns.com.
+	3600	IN	NS	d.ns.buddyns.com.
+	3600	IN	NS	e.ns.buddyns.com.
+	86400	IN	TXT	"v=spf1 mx -all"
+	3600	IN	MX	10 mail.tea-cats.co.uk.
+	86400	IN	A	176.58.125.84
+	86400	IN	AAAA	2a01:7e00::f03c:91ff:feb0:a97f
+
+www	86400	IN	A	176.58.125.84
+	86400	IN	AAAA	2a01:7e00::f03c:91ff:feb0:a97f
+

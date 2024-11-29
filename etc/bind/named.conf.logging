@@ -1,0 +1,35 @@
+// vim: syntax=named nospell
+
+logging {
+	channel default_log {
+		file "/var/log/bind/dns.log";
+		severity dynamic;
+		print-time yes;
+		print-category yes;
+		print-severity yes;
+	};
+
+	channel debug_log {
+		file "/var/log/bind/dns.debug" versions 5 size 1M;
+		severity dynamic;
+		print-time no;
+		print-category yes;
+		print-severity no;
+	};
+
+	channel default_syslog {
+		syslog daemon;
+		severity dynamic;
+		print-time yes;
+		print-category yes;
+		print-severity yes;
+	};
+
+	category default { default_syslog; default_log; };
+	category lame-servers { null; };
+	category resolver { null; };
+	category security { debug_log; };
+	category queries { null; };
+	category query-errors { debug_log; };
+	category xfer-out { default_log; };
+};
