@@ -1,58 +1,64 @@
 ; vim: ts=12 nospell syntax=bindzone
 
-@	7200	IN	SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk ( 2024111301 3600 300 86400 300 )
-	3600	IN	A	192.168.199.73
-	3600	IN	NS	ibis.tea-cats.co.uk.
-	3600	IN	MX	10 mail.tea-cats.co.uk.
-	86400	IN	TXT	"v=spf1 mx a -all"
-	86400	IN	TXT	"google-site-verification=nd7PWPFg81Q9-Ksfuj-s0DjFWn7dv2PyXxgYvkC_Zck"
+$ORIGIN tea-cats.co.uk.
+$TTL 86400	; 1 day
 
-*	86400	IN	MX	10 mail.tea-cats.co.uk.
-*	86400	IN	A	192.168.169.43
+@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk.  ( 2024112902 3600 300 86400 300 )
+	NS	ibis.tea-cats.co.uk.
 
-alicia	86400	IN	A	192.168.4.20
+	; Email configuration
+	MX	10 mail.tea-cats.co.uk.
+	TXT	"v=spf1 mx a -all"
+	TXT	"google-site-verification=nd7PWPFg81Q9-Ksfuj-s0DjFWn7dv2PyXxgYvkC_Zck"
+_dmarc	TXT	"v=DMARC1; p=none; rua=mailto:dmarc@tea-cats.co.uk; rf=afrf; pct=100"
+mail	A	192.168.202.60
+	MX	10 mail
 
-boris	86400	IN	A	188.226.151.24
+	; Apex host, aka griffin.tea-cats.co.uk
+@	A	192.168.199.73
+	AAAA	2a01:7e00::f03c:91ff:feb0:a97f
 
-clive	86400	IN	A	192.168.174.180
+	; General host - aka hawk.tea-cats.co.uk
+*	A	192.168.169.43
+	MX	10 mail
 
-donald	86400	IN	A	178.62.78.221
+clive	A	192.168.174.180
+	MX	10 mail
+falcon	A	192.168.4.24
+	MX	10 mail
+griffin	A	192.168.199.73
+	MX	10 mail
+hawk	A	192.168.192.206
+	MX	10 mail
+kestrel	A	192.168.202.60
+	MX	10 mail
+ibis	A	192.168.169.43
+	MX	10 mail
+junco	A	192.168.4.20
+	MX	10 mail
+lyrebird	A	192.168.159.174
+	MX	10 mail
 
-falcon	86400	IN	A	192.168.4.24
+grafana	CNAME	hawk
+deb	CNAME	hawk
+games	CNAME	hawk
+git	CNAME	hawk
 
-griffin	86400	IN	A	192.168.199.73
+snerge	CNAME	griffin
+www	CNAME	griffin
 
-hawk	86400	IN	A	192.168.192.206
+lists	CNAME	kestrel
 
-kestrel	86400	IN	A	192.168.202.60
+db	CNAME	lyrebird
+bleysblade	CNAME	lyrebird
 
-ibis	86400	IN	A	192.168.169.43
+ntp	CNAME	ibis
 
-junco	86400	IN	A	192.168.4.20
 
-lyrebird	86400	IN	A	192.168.159.174
+$ORIGIN _domainkey.tea-cats.co.uk.
+$TTL 86400	; 1 day
 
-git	3600	IN	CNAME	hawk.tea-cats.co.uk.
-deb	3600	IN	CNAME	hawk.tea-cats.co.uk.
-grafana	3600	IN	CNAME	hawk.tea-cats.co.uk.
-games	3600	IN	CNAME	hawk.tea-cats.co.uk.
-snerge	3600	IN	CNAME	griffin.tea-cats.co.uk.
-bleysblade	3600	IN	CNAME	lyrebird.tea-cats.co.uk.
-db	3600	IN	CNAME	lyrebird.tea-cats.co.uk.
-
-mail	3600	IN	A	192.168.202.60
-
-www	3600	IN	CNAME	griffin.tea-cats.co.uk.
-imap	3600	IN	CNAME	kestrel.tea-cats.co.uk.
-lists	3600	IN	CNAME	clive.tea-cats.co.uk.
-irc	3600	IN	CNAME	clive.tea-cats.co.uk.
-
-ntp	3600	IN	CNAME	ibis.tea-cats.co.uk.
-
-;dzc	86400	IN	TXT	"L4H60C5"
-
-_adsp._domainkey 86400	IN	TXT	"dkim=all"
-ec._domainkey 86400	IN	TXT	"v=DKIM1; k=ecdsa; p=MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEFZ/xnYmfKHMLMU737sjjNzzagDQpvRU2Kn9F4AwBk2w6M/245tBhaM7LURNxVdwBs+BeEQke5RLPsVvkAJblVICLmkNa705lcNqOCw0booszL5ZX524YYPrD6BqAmUFy"
-r1._domainkey 86400	IN	TXT	"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAYSjg+IYCaOy07Uvsicue7BUarOdlKBTEnItc2519zrrS4bofCIoVmBJskX2ZrpmHPMnubE15PGOFaVLqL1O5x8Wwx5AmyVqbRgIBpXaiemtKV/HET34bLXbB0tPIR7TwY33uyKBf9LkkMTtQ4tUP3kRhW3XrTgKnkxOJGMXldQIDAQAB"
-
-_dmarc	86400	IN	TXT	"v=DMARC1; p=none; rua=mailto:dmarc@tea-cats.co.uk; rf=afrf; pct=100"
+_adsp	TXT	"dkim=all"
+clive	TXT	"v=DKIM1; k=rsa; p=MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAuvJefuZdRGmWMk2n1eaEtjy2DWbrkZlt1gk6qLOCV8uHDGDuHPW404YS9Svm97HUX60FyrgA1QCwBQcXCgOfw1Ex2ExZ0m0YvEMN5VDTxaKSRfhoDNPPd1R570buYhSCTIY//MKYR7sMfRYYv/8RqoO1DxhPSkiIQvS32KTxnp8snEn+k+9gdQCOxv+EN+" "IMQi0pi7rNphde5xFLsnvBV+977aEy50c6UxBRWpWR0tKn1LZ6rCHtLULurNxr+E63pEtmleIRFgZHJokO/Gp1qzpdLaZC/efZCIhXAA+M7ylcT5naYKD5ZxS1sGPpI1uYiwslW0EwAyRvidYd0SEuJkqDHyGWsEN0emCK9OJ8uZ04B0YTMgKFEGN3sqPy2+duFjSS3E6gKkcG+R/lfaKjdLAGaLiiXlnKtuBeOS466/BerMnAhvAj6FFmdt" "qkNuHHJ0dCdfCWs42/aGECE8HpEXegU0l6lx6OYksa2Muy6E/JnzB26L3H7NxMm8qSLIx2S1Ng5eDOF2jul4jUv4qq0O3q24+sUZ4LbaV5bIvzqgDVTJReoD4uqmOaGs/NPJVbmEpJzuYwtGLVdh0PU2dWcaab1b0Iop7i2uenoZBeN0CDf8qNOfRFFOTBzvKfN07QV2BDwzx2NLP31DaP7Cb4cWm1VmzPI3k3k18ceC85YnECAwEAAQ=="
+ec	TXT	"v=DKIM1; k=ecdsa; p=MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEFZ/xnYmfKHMLMU737sjjNzzagDQpvRU2Kn9F4AwBk2w6M/245tBhaM7LURNxVdwBs+BeEQke5RLPsVvkAJblVICLmkNa705lcNqOCw0booszL5ZX524YYPrD6BqAmUFy"
+r1	TXT	"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAYSjg+IYCaOy07Uvsicue7BUarOdlKBTEnItc2519zrrS4bofCIoVmBJskX2ZrpmHPMnubE15PGOFaVLqL1O5x8Wwx5AmyVqbRgIBpXaiemtKV/HET34bLXbB0tPIR7TwY33uyKBf9LkkMTtQ4tUP3kRhW3XrTgKnkxOJGMXldQIDAQAB"

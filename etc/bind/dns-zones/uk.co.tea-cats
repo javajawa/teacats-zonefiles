@@ -1,76 +1,73 @@
-$ORIGIN .
-$TTL 7200	; 2 hours
-tea-cats.co.uk		IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk. (
-				2024111201 ; serial
-				3600       ; refresh (1 hour)
-				300        ; retry (5 minutes)
-				86400      ; expire (1 day)
-				300        ; minimum (5 minutes)
-				)
-$TTL 3600	; 1 hour
-			NS	c.ns.buddyns.com.
-			NS	d.ns.buddyns.com.
-			NS	e.ns.buddyns.com.
-			NS	ibis.tea-cats.co.uk.
-$TTL 86400	; 1 day
-			A	176.58.125.84
-$TTL 3600	; 1 hour
-			MX	10 mail.tea-cats.co.uk.
-$TTL 86400	; 1 day
-			TXT	"v=spf1 mx a -all"
-			TXT	"google-site-verification=nd7PWPFg81Q9-Ksfuj-s0DjFWn7dv2PyXxgYvkC_Zck"
-			AAAA	2a01:7e00::f03c:91ff:feb0:a97f
+; vim: ts=12 nospell syntax=bindzone
+
 $ORIGIN tea-cats.co.uk.
-$TTL 300	; 5 minutes
-*			A	109.74.193.188
 $TTL 86400	; 1 day
-			MX	10 mail
-_dmarc			TXT	"v=DMARC1; p=none; rua=mailto:dmarc@tea-cats.co.uk; rf=afrf; pct=100"
-$ORIGIN _domainkey.tea-cats.co.uk.
-_adsp			TXT	"dkim=all"
-clive			TXT	"v=DKIM1; k=rsa; p=MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAuvJefuZdRGmWMk2n1eaEtjy2DWbrkZlt1gk6qLOCV8uHDGDuHPW404YS9Svm97HUX60FyrgA1QCwBQcXCgOfw1Ex2ExZ0m0YvEMN5VDTxaKSRfhoDNPPd1R570buYhSCTIY//MKYR7sMfRYYv/8RqoO1DxhPSkiIQvS32KTxnp8snEn+k+9gdQCOxv+EN+" "IMQi0pi7rNphde5xFLsnvBV+977aEy50c6UxBRWpWR0tKn1LZ6rCHtLULurNxr+E63pEtmleIRFgZHJokO/Gp1qzpdLaZC/efZCIhXAA+M7ylcT5naYKD5ZxS1sGPpI1uYiwslW0EwAyRvidYd0SEuJkqDHyGWsEN0emCK9OJ8uZ04B0YTMgKFEGN3sqPy2+duFjSS3E6gKkcG+R/lfaKjdLAGaLiiXlnKtuBeOS466/BerMnAhvAj6FFmdt" "qkNuHHJ0dCdfCWs42/aGECE8HpEXegU0l6lx6OYksa2Muy6E/JnzB26L3H7NxMm8qSLIx2S1Ng5eDOF2jul4jUv4qq0O3q24+sUZ4LbaV5bIvzqgDVTJReoD4uqmOaGs/NPJVbmEpJzuYwtGLVdh0PU2dWcaab1b0Iop7i2uenoZBeN0CDf8qNOfRFFOTBzvKfN07QV2BDwzx2NLP31DaP7Cb4cWm1VmzPI3k3k18ceC85YnECAwEAAQ=="
-ec			TXT	"v=DKIM1; k=ecdsa; p=MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEFZ/xnYmfKHMLMU737sjjNzzagDQpvRU2Kn9F4AwBk2w6M/245tBhaM7LURNxVdwBs+BeEQke5RLPsVvkAJblVICLmkNa705lcNqOCw0booszL5ZX524YYPrD6BqAmUFy"
-r1			TXT	"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAYSjg+IYCaOy07Uvsicue7BUarOdlKBTEnItc2519zrrS4bofCIoVmBJskX2ZrpmHPMnubE15PGOFaVLqL1O5x8Wwx5AmyVqbRgIBpXaiemtKV/HET34bLXbB0tPIR7TwY33uyKBf9LkkMTtQ4tUP3kRhW3XrTgKnkxOJGMXldQIDAQAB"
-$ORIGIN tea-cats.co.uk.
-alicia			A	192.168.4.16
-$TTL 86400	; 1 day
-clive			A	178.79.154.149
-			AAAA	2a01:7e00::f03c:91ff:feae:4788
-lyrebird		A	172.232.190.75
-			AAAA	2600:3c0a::f03c:95ff:fe3f:0648
+
+@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk.  ( 2024112902 3600 300 86400 300 )
+	NS	c.ns.buddyns.com.
+	NS	d.ns.buddyns.com.
+	NS	e.ns.buddyns.com.
+	NS	ibis.tea-cats.co.uk.
+
+	; Email configuration
+	MX	10 mail.tea-cats.co.uk.
+	TXT	"v=spf1 mx a -all"
+	TXT	"google-site-verification=nd7PWPFg81Q9-Ksfuj-s0DjFWn7dv2PyXxgYvkC_Zck"
+_dmarc	TXT	"v=DMARC1; p=none; rua=mailto:dmarc@tea-cats.co.uk; rf=afrf; pct=100"
+mail	A	109.237.27.144
+	AAAA	2a01:7e00::f03c:91ff:fe55:bb4d
+	MX	10 mail.tea-cats.co.uk.
+
+	; Apex host, aka griffin.tea-cats.co.uk
+@	A	176.58.125.84
+	AAAA	2a01:7e00::f03c:91ff:feb0:a97f
+
+	; General host - aka hawk.tea-cats.co.uk
+*	A	109.74.193.188
+	MX	10 mail
+
+clive	A	178.79.154.149
+	AAAA	2a01:7e00::f03c:91ff:feae:4788
+	MX	10 mail.tea-cats.co.uk.
+falcon	A	192.168.4.24
+	MX	10 mail.tea-cats.co.uk.
+griffin	A	176.58.125.84
+	AAAA	2a01:7e00::f03c:91ff:feb0:a97f
+	MX	10 mail.tea-cats.co.uk.
+hawk	A	178.79.147.203
+	AAAA	2a01:7e00::f03c:91ff:fe55:b018
+	MX	10 mail.tea-cats.co.uk.
+ibis	A	109.74.193.188
+	AAAA	2a01:7e00::f03c:91ff:fe55:ad3c
+	MX	10 mail.tea-cats.co.uk.
+junco	A	192.168.4.20
+	MX	10 mail.tea-cats.co.uk.
+kestrel	A	109.237.27.144
+	AAAA	2a01:7e00::f03c:91ff:fe55:bb4d
+	MX	10 mail.tea-cats.co.uk.
+lyrebird	A	172.232.190.75
+	AAAA	2600:3c0a::f03c:95ff:fe3f:0648
+	MX	10 mail.tea-cats.co.uk.
+
 $TTL 3600	; 1 hour
-db			CNAME	lyrebird
+
+grafana	CNAME	hawk
+deb	CNAME	hawk
+games	CNAME	hawk
+git	CNAME	hawk
+
+snerge	CNAME	griffin
+www	CNAME	griffin
+
+lists	CNAME	kestrel
+
+db	CNAME	lyrebird
 bleysblade	CNAME	lyrebird
-grafana		CNAME	hawk
-deb			CNAME	hawk
+
+
+$ORIGIN _domainkey.tea-cats.co.uk.
 $TTL 86400	; 1 day
-falcon			A	192.168.4.24
-$TTL 3600	; 1 hour
-games			CNAME	hawk
-git			CNAME	hawk
-$TTL 86400	; 1 day
-griffin			A	176.58.125.84
-			AAAA	2a01:7e00::f03c:91ff:feb0:a97f
-hawk			A	178.79.147.203
-			AAAA	2a01:7e00::f03c:91ff:fe55:b018
-$TTL 30	; 30 seconds
-home			A	109.156.38.47
-$TTL 86400	; 1 day
-ibis			A	109.74.193.188
-			AAAA	2a01:7e00::f03c:91ff:fe55:ad3c
-$TTL 3600	; 1 hour
-imap			CNAME	mail
-irc			CNAME	clive
-$TTL 86400	; 1 day
-junco			A	192.168.4.20
-kestrel			A	109.237.27.144
-			AAAA	2a01:7e00::f03c:91ff:fe55:bb4d
-$TTL 3600	; 1 hour
-lists			CNAME	kestrel
-$TTL 86400	; 1 day
-mail			A	109.237.27.144
-			AAAA	2a01:7e00::f03c:91ff:fe55:bb4d
-$TTL 3600	; 1 hour
-snerge			CNAME	griffin
-$TTL 86400	; 1 day
-www			CNAME	griffin
+
+_adsp	TXT	"dkim=all"
+ec	TXT	"v=DKIM1; k=ecdsa; p=MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEFZ/xnYmfKHMLMU737sjjNzzagDQpvRU2Kn9F4AwBk2w6M/245tBhaM7LURNxVdwBs+BeEQke5RLPsVvkAJblVICLmkNa705lcNqOCw0booszL5ZX524YYPrD6BqAmUFy"
+r1	TXT	"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAYSjg+IYCaOy07Uvsicue7BUarOdlKBTEnItc2519zrrS4bofCIoVmBJskX2ZrpmHPMnubE15PGOFaVLqL1O5x8Wwx5AmyVqbRgIBpXaiemtKV/HET34bLXbB0tPIR7TwY33uyKBf9LkkMTtQ4tUP3kRhW3XrTgKnkxOJGMXldQIDAQAB"

@@ -1,4 +1,14 @@
-teacats-zonesfiles (1.0.20241129) stable
+teacats-zonesfiles (1.0.20241129-2) stable
+
+  * Tidy up the zone files for `tea-cats.co.uk`, both public and internal:
+     - Remove references to `alicia`, `boris`, and `dougal` hosts.
+     - Remove references to `imap`, `irc`.
+     - The DMARC public key for `clive.tea-cats.co.uk`.
+     - Remove the TTLs and `IN` from the rows and have them as general data.
+
+-- Benedict Harcourt <ben@tea-cats.co.uk>  not-finialised
+
+teacats-zonesfiles (1.0.20241129-1) stable
 
   * Import the currently existing config into version control
   * This package will be versioned based on the date rather than
