@@ -7,7 +7,7 @@ teacats-zonesfiles (1.0.20241129-2) stable
      - Remove the TTLs and `IN` from the rows and have them as general data.
   * Simplify the Bleysblade zone file to easier reading.
 
--- Benedict Harcourt <ben@tea-cats.co.uk>  not-finialised
+-- Benedict Harcourt <ben@tea-cats.co.uk>  Fri, 29 Nov 2024 12:50:27 +0000
 
 teacats-zonesfiles (1.0.20241129-1) stable
 
