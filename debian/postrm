@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dpkg-divert --package teacats-zonefiles --rename --remove /etc/bind/named.conf

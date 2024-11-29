@@ -1,0 +1,10 @@
+Source: teacats-zonefiles
+Package: teacats-zonefiles
+Section: net
+Priority: optional
+Architecture: all
+Origin: tea-cats
+Build-Depends: make
+Pre-Depends: bind9
+Maintainer: Benedict Harcourt <ben@tea-cats.co.uk>
+Description: Zone files for the Tea-Cats owned domains

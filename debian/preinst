@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dpkg-divert --package teacats-zonefiles --divert /etc/bind/upstream-named.conf --rename /etc/bind/named.conf

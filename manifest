@@ -1,0 +1,13 @@
+./usr/share/doc/teacats-zonefiles
+./usr/share/doc/teacats-zonefiles/changelog.Debian.gz
+./etc/bind/named.conf
+./etc/bind/named.conf.acl
+./etc/bind/named.conf.logging
+./etc/bind/named.conf.zones
+./etc/bind/dns-zones
+./etc/bind/dns-zones/placeholder
+./etc/bind/dns-zones/website
+./etc/bind/dns-zones/internal.tea-cats
+./etc/bind/dns-zones/uk.co.tea-cats
+./etc/bind/dns-zones/uk.co.harcourtprogramming
+./etc/bind/dns-zones/com.bleysblade

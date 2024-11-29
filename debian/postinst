@@ -1,0 +1,3 @@
+#!/bin/sh
+
+systemctl is-enabled named.service && systemctl reload-or-restart named.service

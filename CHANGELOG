@@ -1,0 +1,8 @@
+teacats-zonesfiles (1.0.20241129) stable
+
+  * Import the currently existing config into version control
+  * This package will be versioned based on the date rather than
+    a more semantic change system. This will then match the most
+	recently updated serial number
+
+ -- Benedict Harcourt <ben@tea-cats.co.uk>  Fri, 29 Nov 2024 11:48:44 +0000
