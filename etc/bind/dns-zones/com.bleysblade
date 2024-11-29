@@ -1,16 +1,24 @@
-; vim: ts=8 nospell syntax=bindzone
+; vim: ts=12 nospell syntax=bindzone
 
-@	7200	IN	SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk. ( 2024112902 3600 300 86400 300 )
-	3600	IN	NS	ibis.tea-cats.co.uk.
-	3600	IN	NS	c.ns.buddyns.com.
-	3600	IN	NS	d.ns.buddyns.com.
-	3600	IN	NS	e.ns.buddyns.com.
-	86400	IN	TXT	"v=spf1 mx -all"
+; This zonefile is for bleysblade.com. Default cache/TTL time for records is one day.
+$ORIGIN bleysblade.com.
+$TTL 86400	; 1 day
+
+	; Name Server configuration
+@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk. ( 2024112902 3600 300 86400 300 )
+	NS	ibis.tea-cats.co.uk.
+	NS	c.ns.buddyns.com.
+	NS	d.ns.buddyns.com.
+	NS	e.ns.buddyns.com.
+
+	; Email hosts
+	MX	10 mail.tea-cats.co.uk.
+	TXT	"v=spf1 mx -all"
+
+	; Google Verification
 	86400	IN	TXT	"google-site-verification=iNg4Fw0s-ErpQ9aw5q62VZUSkQJzcxdPmphX6eGNmMI"
-	3600	IN	MX	10 mail.tea-cats.co.uk.
-	86400	IN	A	172.232.190.75
-	86400	IN	AAAA	2600:3c0a::f03c:95ff:fe3f:648
 
-www	86400	IN	A	172.232.190.75
-	86400	IN	AAAA	2600:3c0a::f03c:95ff:fe3f:648
-
+	; Website Hosts
+	A	172.232.190.75
+	AAAA	2600:3c0a::f03c:95ff:fe3f:648
+www	CNAME	@

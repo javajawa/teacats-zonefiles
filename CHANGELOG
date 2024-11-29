@@ -5,6 +5,7 @@ teacats-zonesfiles (1.0.20241129-2) stable
      - Remove references to `imap`, `irc`.
      - The DMARC public key for `clive.tea-cats.co.uk`.
      - Remove the TTLs and `IN` from the rows and have them as general data.
+  * Simplify the Bleysblade zone file to easier reading.
 
 -- Benedict Harcourt <ben@tea-cats.co.uk>  not-finialised
 
