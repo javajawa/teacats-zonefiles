@@ -1,3 +1,9 @@
+teacats-zonesfiles (1.0.20241129-3) stable
+
+  * Fix use of `dpkg-divert` for replacing the default `named.conf` from `bind9`
+
+-- Benedict Harcourt <ben@tea-cats.co.uk>  Fri, 29 Nov 2024 12:55:30 +0000
+
 teacats-zonesfiles (1.0.20241129-2) stable
 
   * Tidy up the zone files for `tea-cats.co.uk`, both public and internal:
