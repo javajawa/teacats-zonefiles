@@ -3,7 +3,7 @@
 $ORIGIN tea-cats.co.uk.
 $TTL 86400	; 1 day
 
-@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk.  ( 2024112902 3600 300 86400 300 )
+@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk.  ( 2025012401 3600 300 86400 300 )
 	NS	c.ns.buddyns.com.
 	NS	d.ns.buddyns.com.
 	NS	e.ns.buddyns.com.
@@ -58,6 +58,9 @@ git	CNAME	hawk
 
 snerge	CNAME	griffin
 www	CNAME	griffin
+
+bsky	CNAME	clive
+kitteh	CNAME	bsky
 
 lists	CNAME	kestrel
 

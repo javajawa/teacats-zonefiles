@@ -1,10 +1,16 @@
-teacats-zonesfiles (1.0.20241129-3) stable
+teacats-zonefiles (1.0.20250120-1) stable
+
+  * Add records for ATProto private data store.
+
+-- Benedict Harcourt <ben@tea-cats.co.uk>  Fri, 24 Jan 2025 19:50:58 +0000
+
+teacats-zonefiles (1.0.20241129-3) stable
 
   * Fix use of `dpkg-divert` for replacing the default `named.conf` from `bind9`
 
 -- Benedict Harcourt <ben@tea-cats.co.uk>  Fri, 29 Nov 2024 12:55:30 +0000
 
-teacats-zonesfiles (1.0.20241129-2) stable
+teacats-zonefiles (1.0.20241129-2) stable
 
   * Tidy up the zone files for `tea-cats.co.uk`, both public and internal:
      - Remove references to `alicia`, `boris`, and `dougal` hosts.
@@ -15,7 +21,7 @@ teacats-zonesfiles (1.0.20241129-2) stable
 
 -- Benedict Harcourt <ben@tea-cats.co.uk>  Fri, 29 Nov 2024 12:50:27 +0000
 
-teacats-zonesfiles (1.0.20241129-1) stable
+teacats-zonefiles (1.0.20241129-1) stable
 
   * Import the currently existing config into version control
   * This package will be versioned based on the date rather than
