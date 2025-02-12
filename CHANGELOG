@@ -1,3 +1,9 @@
+teacats-zonefiles (1.0.20250120-2) stable
+
+  * Map `*.bsky.tea-cats.co.uk` to bsky DNS.
+
+-- Benedict Harcourt <ben@tea-cats.co.uk>  Fri, 24 Jan 2025 21:01:01 +0000
+
 teacats-zonefiles (1.0.20250120-1) stable
 
   * Add records for ATProto private data store.
