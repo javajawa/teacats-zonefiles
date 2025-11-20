@@ -1,5 +1,11 @@
 teacats-zonefiles (1.0.20251120-1) stable
 
+  * Update to support new root zone hints in bind 9.20
+
+-- Benedict Harcourt <ben@tea-cats.co.uk>  Thu, 20 Nov 2025 13:05:00 +0000
+
+teacats-zonefiles (1.0.20251120-1) stable
+
   * Add BlueSky / atproto validation record for kitteh.tea-cats.co.uk.
   * Change "internal" IP for lyrebird to match the public one as it's not
     attached to the Telehouse London network.

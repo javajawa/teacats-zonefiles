@@ -5,6 +5,6 @@ Priority: optional
 Architecture: all
 Origin: tea-cats
 Build-Depends: make
-Pre-Depends: bind9
+Pre-Depends: bind9 (>= 1:9.20)
 Maintainer: Benedict Harcourt <ben@tea-cats.co.uk>
 Description: Zone files for the Tea-Cats owned domains

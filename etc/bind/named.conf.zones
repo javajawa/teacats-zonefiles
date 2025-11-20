@@ -5,8 +5,7 @@ view "internal" {
 
 	recursion yes;
 
-	include "/etc/bind/named.conf.default-zones";
-	include "/etc/bind/zones.rfc1918";
+	include "/etc/bind/named.conf.root-hints";
 
 	zone "tea-cats.co.uk" {
 		type master;
