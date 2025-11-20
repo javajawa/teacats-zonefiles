@@ -3,7 +3,7 @@
 $ORIGIN tea-cats.co.uk.
 $TTL 86400	; 1 day
 
-@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk.  ( 2025021201 3600 300 86400 300 )
+@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk.  ( 2025112001 3600 300 86400 300 )
 	NS	ibis.tea-cats.co.uk.
 
 	; Email configuration
@@ -36,7 +36,7 @@ ibis	A	192.168.169.43
 	MX	10 mail
 junco	A	192.168.4.20
 	MX	10 mail
-lyrebird	A	192.168.159.174
+lyrebird	A	172.232.190.75 ; Not on the internal network
 	MX	10 mail
 
 bsky	CNAME	clive
