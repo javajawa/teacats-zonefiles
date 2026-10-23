@@ -11,3 +11,5 @@
 ./etc/bind/dns-zones/uk.co.tea-cats
 ./etc/bind/dns-zones/uk.co.harcourtprogramming
 ./etc/bind/dns-zones/com.bleysblade
+./etc/iptables.d/filter4/20-named
+./etc/iptables.d/filter6/20-named
