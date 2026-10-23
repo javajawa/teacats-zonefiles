@@ -2,6 +2,7 @@ teacats-zonefiles (1.0.20261023-1) stable
 
   * Update authorative NS from BuddyNS to kestrel+lyrebird.
   * Add iptables rules for DNS server to the package.
+  * Add default environment variables to the package.
 
 -- Benedict Harcourt <ben@tea-cats.co.uk>  Fri, 23 Oct 2026 09:22:43 +0000
 
