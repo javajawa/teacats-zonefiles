@@ -48,11 +48,6 @@ view "public" {
 		file "/etc/bind/dns-zones/website";
 	};
 
-	zone "play-noggle.co.uk" {
-		type master;
-		file "/etc/bind/dns-zones/website";
-	};
-
 	zone "peterdavies.me.uk" {
 		type master;
 		file "/etc/bind/dns-zones/website";
@@ -68,27 +63,7 @@ view "public" {
 		file "/etc/bind/dns-zones/placeholder";
 	};
 
-	zone "teacats.uk" {
-		type master;
-		file "/etc/bind/dns-zones/placeholder";
-	};
-
-	zone "tea-cats.uk" {
-		type master;
-		file "/etc/bind/dns-zones/placeholder";
-	};
-
 	zone "harcourtprogramming.uk" {
-		type master;
-		file "/etc/bind/dns-zones/placeholder";
-	};
-
-	zone "play-noggle.uk" {
-		type master;
-		file "/etc/bind/dns-zones/placeholder";
-	};
-
-	zone "canigohomeyet.uk" {
 		type master;
 		file "/etc/bind/dns-zones/placeholder";
 	};

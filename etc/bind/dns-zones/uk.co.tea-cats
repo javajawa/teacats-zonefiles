@@ -3,11 +3,10 @@
 $ORIGIN tea-cats.co.uk.
 $TTL 86400	; 1 day
 
-@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk.  ( 2025112001 3600 300 86400 300 )
-	NS	c.ns.buddyns.com.
-	NS	d.ns.buddyns.com.
-	NS	e.ns.buddyns.com.
+@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk.  ( 2026102301 3600 300 86400 300 )
 	NS	ibis.tea-cats.co.uk.
+	NS	hawk.tea-cats.co.uk.
+	NS	lyrebird.tea-cats.co.uk.
 
 	; Email configuration
 	MX	10 mail.tea-cats.co.uk.

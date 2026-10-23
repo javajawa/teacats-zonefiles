@@ -5,11 +5,10 @@ $ORIGIN bleysblade.com.
 $TTL 86400	; 1 day
 
 	; Name Server configuration
-@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk. ( 2024112902 3600 300 86400 300 )
+@	IN SOA	ibis.tea-cats.co.uk. root.tea-cats.co.uk. ( 2026102301 3600 300 86400 300 )
 	NS	ibis.tea-cats.co.uk.
-	NS	c.ns.buddyns.com.
-	NS	d.ns.buddyns.com.
-	NS	e.ns.buddyns.com.
+	NS	hawk.tea-cats.co.uk.
+	NS	lyrebird.tea-cats.co.uk.
 
 	; Email hosts
 	MX	10 mail.tea-cats.co.uk.
