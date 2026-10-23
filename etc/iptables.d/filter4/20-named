@@ -1,0 +1,8 @@
+-A INPUT -p udp --dport 53 -j ACCEPT
+-A INPUT -p tcp --dport 53 -j ACCEPT
+
+-A OUTPUT -p udp --dport 53 -m owner --uid-owner bind -j ACCEPT
+-A OUTPUT -p tcp --dport 53 -m owner --uid-owner bind -j ACCEPT
+
+-A OUTPUT -p udp --sport 53 -m owner --uid-owner bind -j ACCEPT
+-A OUTPUT -p tcp --sport 53 -m owner --uid-owner bind -j ACCEPT
